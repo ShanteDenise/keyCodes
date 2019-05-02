@@ -1,14 +1,103 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f4f8;
+}
+
+.App, #root {
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+
+}
+
+
+.App__Key {
+  font-size: 15vw;
+  line-height: 1;
+  display: block;  
+  margin-bottom: 20px;
+
+}
+
+.App__KeyCode {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 20vw;
+  line-height: 1;
+  color: rgb(69, 82, 69);
+}
+
+@media screen and (max-width: 600px) { 
+  .App__KeyCode {
+    font-size: 25vw;
+  }
+}
+
+.Box__Container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding: 0 16px;
+}
+
+.Box {
+    border: 1px white solid;
+    background-color: #f2f4f8;
+    width: 32%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+}
+
+.Box h2 { 
+  background:rgb(31, 118, 139);
+  color: white;
+  line-height: 1;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.Box span {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  line-height: 1;
+  background-color:white;
+  box-shadow:  5px 25px 12px 12px #7f8083;
+}
+
+.title{
+  color: white;
 }
